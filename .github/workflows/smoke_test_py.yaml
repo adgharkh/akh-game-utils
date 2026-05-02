@@ -16,4 +16,4 @@ jobs:
 
       - name: Run script (dry run)
         run: |
-          python soulframe/src/sf_qna_quick_convert.py --help || true
+          python soulframe/src/sf_qna_quick_convert.py --help 
