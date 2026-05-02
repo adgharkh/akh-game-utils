@@ -20,7 +20,7 @@ jobs:
       - name: Read sheet URL from config
         id: config
         run: |
-          url=$(python -c "import yaml; print(yaml.safe_load(open('soulframe/config.yaml'))['sheet_url'])")
+          url=$(grep 'sheet_url' soulframe/config.yaml | sed 's/.*"\(.*\)"/\1/')
           echo "sheet_url=$url" >> $GITHUB_OUTPUT
 
       - name: Generate wikitable
