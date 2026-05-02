@@ -7,7 +7,7 @@ This subdirectory is for tools relating to the game SoulFrame. For more info, ch
 Fetches a Google Sheets CSV export and converts it into MediaWiki table format. The script is intended specifically for https://docs.google.com/spreadsheets/d/1lBAslGeoyCi_k7xWu4ztt1YMzKyJd5FCVOAwPUsw2ms/edit?gid=0#gid=0 (TinyUrl redirect: https://tinyurl.com/soulframe-community-faq)
 
 ### IMPORTANT NOTE
-Before updating https://wiki.avakot.org/Guide:Q%26A_Quick_Reference_(Community_FAQ), please check the "View history" on that page and ensure that all changes submitted via wiki are reflected in the Google Sheets link at 
+Before updating https://wiki.avakot.org/Guide:Q%26A_Quick_Reference_(Community_FAQ), please check the "View history" on that page and ensure that all changes submitted via wiki are reflected in the Google Sheets link above.
 
 ### Command line usage generally
 
