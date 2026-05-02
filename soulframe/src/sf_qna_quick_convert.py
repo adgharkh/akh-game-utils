@@ -1,5 +1,5 @@
+import argparse
 import csv
-import sys
 import requests
 from datetime import datetime, timezone
 from pathlib import Path
@@ -83,12 +83,13 @@ def csv_to_wikitable(rows, output_txt, addTimestamp=True):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: sf_qna_quick_convert.py <input_csv_or_url> <output_txt>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Convert a CSV Q&A sheet to MediaWiki wikitable format.")
+    parser.add_argument("input", help="Path to a local CSV file, or a URL to fetch")
+    parser.add_argument("output", help="Path for the output .txt file")
+    parser.add_argument("--no-timestamp", dest="timestamp", action="store_false",
+                        help="Omit the UTC snapshot timestamp from the output")
+    parser.set_defaults(timestamp=True)
+    args = parser.parse_args()
 
-    input_source = sys.argv[1]
-    output_txt = sys.argv[2]
-
-    rows = load_csv_source(input_source)
-    csv_to_wikitable(rows, output_txt)
+    rows = load_csv_source(args.input)
+    csv_to_wikitable(rows, args.output, addTimestamp=args.timestamp)
