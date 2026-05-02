@@ -1,4 +1,4 @@
-name: Run Script Check
+name: Smoke Test
 
 on: [push]
 
