@@ -1,0 +1,26 @@
+# Warframe Utils — Configuration
+# Do NOT store secrets here. Use environment variables or a .env.local file.
+
+app:
+  name: "Warframe Descendia Tracker"
+  game: "Warframe"
+  feature: "The Descendia"
+  total_stages: 21
+  variants: ["normal", "steel_path"]
+  choice_floors: [7, 14]
+  # TODO: confirm exact reset day and time from in-game observation
+  reset_day_utc: "Monday"
+  reset_time_utc: "00:00"
+
+supabase:
+  # Set these as environment variables (or in .env.local for local dev)
+  # Frontend (public, read-only via RLS):
+  url_env_var: "VITE_SUPABASE_URL"
+  anon_key_env_var: "VITE_SUPABASE_ANON_KEY"
+  # Admin writes only — NEVER expose in the frontend bundle:
+  service_role_key_env_var: "SUPABASE_SERVICE_ROLE_KEY"
+
+hosting:
+  platform: "Vercel"
+  app_root: "warframe/src"
+  repo: "https://github.com/adgharkh/akh-game-utils"

@@ -1,0 +1,94 @@
+/* ConditionTable styles.
+   Uses CSS Modules — class names are locally scoped.
+   Intentionally plain so it's easy to restyle or swap for a design system. */
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #2a2a2e;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table thead {
+  background: #1a1a1f;
+}
+
+.table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: #a0a0b0;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #2a2a2e;
+}
+
+.table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #1e1e22;
+  vertical-align: middle;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: #16161a;
+}
+
+.stageCol {
+  width: 80px;
+  font-weight: 600;
+  color: #c0b090;
+  white-space: nowrap;
+}
+
+/* Choice floor rows */
+.choiceFloor {
+  background: #12121a;
+}
+
+.choiceLabel {
+  color: #7070a0;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.choiceOptions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.optionA,
+.optionB {
+  background: #1e1e2e;
+  border: 1px solid #3a3a5e;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.9rem;
+}
+
+.orDivider {
+  color: #606080;
+  font-size: 0.8rem;
+}
+
+/* Empty/unknown states */
+.unknown {
+  color: #505060;
+  font-style: italic;
+}
+
+.none {
+  color: #404050;
+  font-style: italic;
+}
