@@ -14,6 +14,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run script (dry run)
-        run: |
-          python soulframe/src/sf_qna_quick_convert.py --help 
+      - name: Install dependencies
+        run: pip install -r soulframe/requirements.txt
+
+      - name: Smoke test
+        run: python soulframe/src/sf_qna_quick_convert.py --help
