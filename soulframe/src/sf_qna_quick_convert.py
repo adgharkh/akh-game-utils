@@ -84,7 +84,7 @@ def csv_to_wikitable(rows, output_txt, addTimestamp=True):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: sf_qna_quick_convert-v3.py <input_csv_or_url> <output_txt>")
+        print("Usage: sf_qna_quick_convert.py <input_csv_or_url> <output_txt>")
         sys.exit(1)
 
     input_source = sys.argv[1]
