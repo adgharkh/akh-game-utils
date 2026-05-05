@@ -26,8 +26,12 @@ jobs:
       - name: Generate wikitable
         run: python soulframe/src/sf_qna_quick_convert.py "${{ steps.config.outputs.sheet_url }}" output.txt
 
+      - name: Set timestamp
+        id: ts
+        run: echo "value=$(date -u +'%Y%m%d%H%M')" >> $GITHUB_OUTPUT
+
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
-          name: wikitable-output
+          name: wikitable-output-${{ steps.ts.outputs.value }}
           path: output.txt
